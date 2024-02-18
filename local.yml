@@ -1,0 +1,39 @@
+- name: Install system packages
+  hosts: localhost
+  become: true
+  tasks:
+    - ansible.builtin.dnf:
+        name:
+          - ag
+          - alacritty
+          - curl
+          - direnv
+          - fd-find
+          - fzf
+          - neovim
+          - nodejs
+          - podman
+          - ripgrep
+          - stow
+          - tig
+          - tmux
+          - tree
+          - vim
+          - "@C Development Tools and Libraries"
+        state: latest
+        update_cache: true
+  tags:
+    - system
+
+- name: Personal setup
+  hosts: localhost
+  vars:
+    home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
+  tasks:
+    - ansible.builtin.include_tasks:
+        file: "{{ task }}"
+      loop:
+        - tasks/pyenv.yml
+        - tasks/dotfiles.yml
+      loop_control:
+        loop_var: task
