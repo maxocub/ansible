@@ -2,6 +2,10 @@
   hosts: localhost
   become: true
   tasks:
+    - community.general.copr:
+        name: atim/starship
+    - community.general.copr:
+        name: atim/lazygit
     - ansible.builtin.dnf:
         name:
           - ag
@@ -10,10 +14,12 @@
           - direnv
           - fd-find
           - fzf
+          - lazygit
           - neovim
           - nodejs
           - podman
           - ripgrep
+          - starship
           - stow
           - tig
           - tmux
