@@ -1,3 +1,7 @@
+# Description
+
+Ansible script to setup my terminal emulator and tools
+
 # Run
 
 ```bash
