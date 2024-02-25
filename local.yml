@@ -6,6 +6,8 @@
         name: atim/starship
     - community.general.copr:
         name: atim/lazygit
+    - community.general.copr:
+        name: agriffis/neovim-nightly
     - ansible.builtin.dnf:
         name:
           - ag
@@ -18,6 +20,7 @@
           - neovim
           - nodejs
           - podman
+          - python3-neovim
           - ripgrep
           - starship
           - stow
