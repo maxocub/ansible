@@ -10,7 +10,6 @@
         name: agriffis/neovim-nightly
     - ansible.builtin.dnf:
         name:
-          - ag
           - alacritty
           - curl
           - direnv
@@ -24,7 +23,6 @@
           - ripgrep
           - starship
           - stow
-          - tig
           - tmux
           - tree
           - vim
