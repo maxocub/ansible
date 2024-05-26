@@ -41,5 +41,6 @@
       loop:
         - tasks/pyenv.yml
         - tasks/dotfiles.yml
+        - tasks/neovim.yml
       loop_control:
         loop_var: task

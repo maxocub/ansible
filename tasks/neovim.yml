@@ -1,0 +1,16 @@
+- name: Check if personnel directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/personnel"
+    state: directory
+    mode: "0755"
+
+- name: Cloning nvim-config
+  ansible.builtin.git:
+    repo: https://github.com/maxocub/nvim-config.git
+    dest: "{{ home }}/personnel/nvim-config"
+
+- name: Create a symbolic link in .config directory
+  ansible.builtin.file:
+    src: "{{ home }}/personnel/nvim-config/"
+    dest: "{{ home }}/.config/nvim"
+    state: link
