@@ -15,6 +15,7 @@
           - direnv
           - fd-find
           - fzf
+          - git
           - lazygit
           - neovim
           - nodejs
