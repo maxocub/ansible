@@ -11,6 +11,7 @@
     - ansible.builtin.dnf:
         name:
           - alacritty
+          - cargo
           - curl
           - direnv
           - fd-find
@@ -39,6 +40,7 @@
     - ansible.builtin.include_tasks:
         file: "{{ task }}"
       loop:
+        - tasks/atuin.yml
         - tasks/pyenv.yml
         - tasks/dotfiles.yml
         - tasks/neovim.yml
