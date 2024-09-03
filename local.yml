@@ -41,6 +41,7 @@
         file: "{{ task }}"
       loop:
         - tasks/atuin.yml
+        - tasks/nvm.yml
         - tasks/pyenv.yml
         - tasks/dotfiles.yml
         - tasks/neovim.yml
