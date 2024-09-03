@@ -2,13 +2,17 @@
   hosts: localhost
   become: true
   tasks:
-    - community.general.copr:
+    - name: Add Starship copr
+      community.general.copr:
         name: atim/starship
-    - community.general.copr:
+    - name: Add Lazygit copr
+      community.general.copr:
         name: atim/lazygit
-    - community.general.copr:
+    - name: Add Neovim copr
+      community.general.copr:
         name: agriffis/neovim-nightly
-    - ansible.builtin.dnf:
+    - name: Install packages from dnf
+      ansible.builtin.dnf:
         name:
           - alacritty
           - curl
@@ -37,7 +41,8 @@
   vars:
     home: "{{ lookup('ansible.builtin.env', 'HOME') }}"
   tasks:
-    - ansible.builtin.include_tasks:
+    - name: Run tasks
+      ansible.builtin.include_tasks:
         file: "{{ task }}"
       loop:
         - tasks/atuin.yml
