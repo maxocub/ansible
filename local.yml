@@ -20,6 +20,7 @@
           - lazygit
           - neovim
           - nodejs
+          - openssh
           - podman
           - python3-neovim
           - ripgrep
