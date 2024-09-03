@@ -1,8 +1,2 @@
-- name: Download bash-preexec script, required for atuin with bash
-  ansible.builtin.get_url:
-    url: https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh
-    dest: "{{ home }}/.bash-preexec.sh"
-
-- name: Install atuin with cargo
-  community.general.cargo:
-    name: atuin
+- name: Install atuin
+  ansible.builtin.shell: curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
