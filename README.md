@@ -8,6 +8,12 @@ Ansible script to setup my terminal emulator and tools
 ansible-playbook local.yml --ask-become-pass
 ```
 
+Or with `uv`:
+
+```bash
+uvx --from ansible-core ansible-playbook local.yml --ask-become-pass
+```
+
 # Test
 
 ```bash
