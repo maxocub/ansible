@@ -47,7 +47,6 @@
       loop:
         - tasks/atuin.yml
         - tasks/nvm.yml
-        - tasks/pyenv.yml
         - tasks/uv.yml
         - tasks/dotfiles.yml
         - tasks/neovim.yml
