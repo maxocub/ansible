@@ -1,18 +1,18 @@
-- name: Check if personnel directory exists
+- name: Check if Personnel directory exists
   ansible.builtin.file:
-    path: "{{ home }}/personnel"
+    path: "{{ home }}/Personnel"
     state: directory
     mode: "0755"
 
 - name: Cloning dotfiles
   ansible.builtin.git:
     repo: https://github.com/maxocub/dotfiles.git
-    dest: "{{ home }}/personnel/dotfiles"
+    dest: "{{ home }}/Personnel/dotfiles"
 
 - name: Stow dotfiles
   ansible.builtin.shell: ./dotfiles.sh
   args:
-    chdir: "{{ home }}/personnel/dotfiles"
+    chdir: "{{ home }}/Personnel/dotfiles"
 
 - name: Clear fonts cache
   ansible.builtin.shell: fc-cache
