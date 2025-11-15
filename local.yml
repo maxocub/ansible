@@ -19,6 +19,7 @@
           - direnv
           - fd-find
           - fzf
+          - gnome-tweaks
           - git
           - lazygit
           - neovim
