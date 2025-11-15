@@ -21,6 +21,7 @@
           - fzf
           - gnome-tweaks
           - git
+          - keepassxc
           - lazygit
           - neovim
           - nodejs
