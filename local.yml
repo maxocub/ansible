@@ -33,8 +33,10 @@
           - starship
           - stow
           - tmux
+          - transmission
           - tree
           - vim
+          - vlc
           - "@C Development Tools and Libraries"
         state: latest
         update_cache: true
