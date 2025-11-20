@@ -8,9 +8,6 @@
     - name: Add Lazygit copr
       community.general.copr:
         name: atim/lazygit
-    - name: Add Neovim copr
-      community.general.copr:
-        name: agriffis/neovim-nightly
     - name: Install packages from dnf
       ansible.builtin.dnf:
         name:
@@ -29,7 +26,6 @@
           - nodejs
           - openssh
           - podman
-          - python3-neovim
           - ripgrep
           - starship
           - stow
