@@ -12,6 +12,7 @@
       ansible.builtin.dnf:
         name:
           - alacritty
+          - chromium
           - curl
           - direnv
           - fd-find
