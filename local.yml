@@ -27,6 +27,7 @@
           - nodejs
           - openssh
           - podman
+          - postgresql
           - ripgrep
           - starship
           - stow
