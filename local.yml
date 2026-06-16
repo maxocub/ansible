@@ -25,6 +25,7 @@
           - neovim
           - nodejs
           - openssh
+          - opentofu
           - podman
           - postgresql
           - ripgrep
